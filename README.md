@@ -17,6 +17,7 @@ docker-compose down
 ## Локальный запуск (без Docker)
 
 ```bash
+
 cd front
 npm install
 npm run dev
