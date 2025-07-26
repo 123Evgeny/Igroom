@@ -1,8 +1,9 @@
-import ArrowLeftIcon from "@/shared/ui/icon/arrowLeft.svg";
+import ArrowLeftIcon from "@/shared/ui/icon/ArrowLeft.svg";
 import { useRouter } from "next/navigation";
 import ArrowUpload from "@/shared/ui/icon/ArrowUpload.svg";
 import IconEye from "@/shared/ui/icon/IconEye.svg";
 import SmileCat from "@/shared/ui/icon/SmileCat.svg";
+import Image from "next/image";
 
 export const ProfileHeaderBlock = () => {
   const router = useRouter();
@@ -10,11 +11,12 @@ export const ProfileHeaderBlock = () => {
     <div className="flex w-full h-full items-start gap-2">
       <div className="w-full flex flex-[1] justify-start">
         <button
-          className="text-2xl text-gray-400"
+          className="text-2xl text-gray-400 cursor-pointer transition active:scale-90 rounded-full p-1 group"
           onClick={() => router.back()}
           aria-label="Назад"
+          tabIndex={0}
         >
-          <ArrowLeftIcon className="w-10 h-10" />
+          <ArrowLeftIcon className="w-10 h-10 group-active:-translate-x-1 group-hover:text-[#A000FF] transition" />
         </button>
       </div>
       {/* Центр: аватар */}
@@ -31,10 +33,13 @@ export const ProfileHeaderBlock = () => {
           P
         </span>
         <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex items-center justify-center bg-gray-200">
-          <img
+          <Image
             src="/Avatar/1.png"
             alt="Аватарка"
+            width={180}
+            height={180}
             className="w-full h-full object-cover"
+            priority
           />
         </div>
       </div>
@@ -57,4 +62,4 @@ export const ProfileHeaderBlock = () => {
       </div>
     </div>
   );
-}; 
+};

@@ -9,9 +9,9 @@ const docs = [
   "Пользовательское соглашение",
 ];
 
-export const ProfileDocs = () => (
+const ProfileDocs = () => (
   <div className="w-full bg-white rounded-3xl p-4 mb-3">
-    {docs.map((doc, idx) => (
+    {docs.map((doc) => (
       <div
         key={doc}
         className="flex items-center gap-2 py-2 border-b last:border-b-0 border-gray-200"
@@ -27,3 +27,5 @@ export const ProfileDocs = () => (
     ))}
   </div>
 );
+
+export default ProfileDocs;

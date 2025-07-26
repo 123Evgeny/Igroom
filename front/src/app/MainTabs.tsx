@@ -9,9 +9,8 @@ import { useQuery } from "@tanstack/react-query";
 const PROFILE_TAB = "user";
 
 export default function MainTabs() {
-  const [activeTab, setActiveTab] = useState(PROFILE_TAB);
+  const [activeTab] = useState(PROFILE_TAB);
 
-  // Получаем профиль только если выбрана вкладка user
   const { data, isLoading, error } = useQuery({
     queryKey: ["profile"],
     queryFn: fetchProfile,
@@ -22,8 +21,9 @@ export default function MainTabs() {
   if (activeTab === PROFILE_TAB) {
     if (isLoading) content = <div>Загрузка...</div>;
     else if (error) content = <div>Ошибка загрузки профиля</div>;
-    else if (data) content = <ProfilePageWidget profile={data} />;
-    else content = null;
+    else if (data) {
+      content = <ProfilePageWidget />;
+    } else content = null;
   }
 
   return (

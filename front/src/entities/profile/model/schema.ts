@@ -2,25 +2,30 @@ import { z } from "zod";
 
 export const ProfileSchema = z.object({
   id: z.string(),
-  role: z.string(),
   name: z.string(),
   nickname: z.string(),
-  avatar_url: z.string().url(),
-  age: z.number(),
+  avatar_url: z.string(),
+  is_kotum: z.boolean(),
+  is_me: z.boolean(),
+  role: z.string(),
+  last_login_at: z.string(),
+  stats: z.object({
+    monthsInIgroom: z.number(),
+    meetingsCount: z.number(),
+    totalRoomers: z.number(),
+  }),
   city: z.object({
     id: z.string(),
     name: z.string(),
   }),
+  status: z.object({
+    zovy: z.number(),
+    idu: z.number(),
+  }),
+  is_adult: z.boolean(),
   is_private: z.boolean(),
-  telegram: z.string(),
   about: z.string(),
-  points: z.number(),
-  calling_limit: z.number(),
-  going_limit: z.number(),
-  account_status: z.string(),
-  last_login_at: z.string(),
-  created_at: z.string(),
-  updated_at: z.string(),
+  telegram: z.string(),
 });
 
 export type Profile = z.infer<typeof ProfileSchema>;

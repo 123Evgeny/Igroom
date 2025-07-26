@@ -20,7 +20,6 @@ export function ProfileSocials({ socials }: ProfileSocialsProps) {
           rel="noopener noreferrer"
           className="flex items-center gap-1 px-3 py-1 rounded bg-gray-100 hover:bg-blue-100 text-sm text-blue-700 transition"
         >
-          {/* Здесь можно добавить иконку соцсети */}
           <span>{s.label}</span>
         </a>
       ))}

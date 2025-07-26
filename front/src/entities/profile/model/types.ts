@@ -19,4 +19,11 @@ export interface Profile {
   last_login_at: string;
   created_at: string;
   updated_at: string;
+  monthsInIgroom: number;
+  meetingsCount: number;
+  totalRoomers: number;
+  status: {
+    zovy: number;
+    idu: number;
+  };
 }

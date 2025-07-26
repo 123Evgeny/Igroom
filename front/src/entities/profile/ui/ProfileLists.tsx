@@ -1,6 +1,6 @@
-import CheckMark from "@/shared/ui/Icon/СheckMark.svg";
-import Cross from "@/shared/ui/Icon/Cross.svg";
-import LabelIcon from "@/shared/ui/Icon/LabelIcon.svg";
+import CheckMark from "@/shared/ui/icon/CheckMark.svg";
+import Cross from "@/shared/ui/icon/Cross.svg";
+import LabelIcon from "@/shared/ui/icon/LabelIcon.svg";
 
 export const ProfileLists = () => (
   <div className="w-full bg-white rounded-3xl p-4 mb-3">

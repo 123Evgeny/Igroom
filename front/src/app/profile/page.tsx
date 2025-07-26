@@ -14,5 +14,7 @@ export default function ProfilePage() {
   if (error) return <div>Ошибка загрузки профиля</div>;
   if (!data) return <div>Нет данных</div>;
 
-  return <ProfilePageWidget profile={data} />;
+  
+
+  return <ProfilePageWidget  />;
 }

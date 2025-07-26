@@ -1,4 +1,4 @@
-import HistoryIcon from "@/shared/ui/Icon/HistoryIcon.svg";
+import HistoryIcon from "@/shared/ui/icon/HistoryIcon.svg";
 
 export const ProfileHistory = () => (
   <div className="w-full bg-white rounded-3xl p-4 flex items-center gap-3 mb-3">

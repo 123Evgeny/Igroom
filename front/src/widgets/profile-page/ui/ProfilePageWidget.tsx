@@ -1,16 +1,21 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setProfile } from "@/shared/redux/profileSlice";
+import { fetchProfile } from "@/entities/profile/model/api";
 import { ProfileCard } from "../../../features/profile-card/ui/ProfileCard";
-import type { Profile } from "../../../entities/profile/model/types";
-import { ProfileSocials } from "../../../entities/profile/ui/ProfileSocials";
 
-interface ProfilePageWidgetProps {
-  profile: Profile;
-}
+export function ProfilePageWidget() {
+  const dispatch = useDispatch();
 
-export function ProfilePageWidget({ profile }: ProfilePageWidgetProps) {
+  useEffect(() => {
+    fetchProfile().then((profile) => {
+      dispatch(setProfile(profile));
+    });
+  }, [dispatch]);
+
   return (
     <div className="max-w-xl mx-auto  mt-4">
-      <ProfileCard profile={profile} />
-      {/* Здесь могут быть другие виджеты */}
+      <ProfileCard />
     </div>
   );
 }

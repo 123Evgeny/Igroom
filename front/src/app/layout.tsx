@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactQueryClientProvider } from "../shared/lib/ReactQueryClientProvider";
 import { Header } from "@/widgets/header/ui/Header";
 import { Footer } from "@/widgets/footer/Footer";
 import { ReduxProvider } from "../shared/redux/Provider";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Игрум",

@@ -1,4 +1,4 @@
-import { Avatar } from "../../../shared/ui/Avatar/Avatar";
+import { Avatar } from "../../../shared/ui/avatar/Avatar";
 import type { Profile } from "../model/types";
 import { useState } from "react";
 
@@ -20,7 +20,7 @@ export function ProfileInfo({ profile }: ProfileInfoProps) {
         }
         alt={profile.name}
         size={80}
-        // @ts-ignore
+        // @ts-expect-error onError не типизирован в Avatar, но нужен для обработки ошибки загрузки
         onError={() => setImgError(true)}
       />
       <div>
