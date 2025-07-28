@@ -1,4 +1,4 @@
-import { Avatar } from "../../../shared/ui/avatar/Avatar";
+import { Avatar } from "@/shared/ui/Avatar/Avatar";
 import type { Profile } from "../model/types";
 import { useState } from "react";
 
