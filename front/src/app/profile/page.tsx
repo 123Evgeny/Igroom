@@ -10,9 +10,7 @@ export default function ProfilePage() {
     queryFn: fetchProfile,
   });
 
-  if (isLoading) return <div>Загрузка...</div>;
-  if (error) return <div>Ошибка загрузки профиля</div>;
-  if (!data) return <div>Нет данных</div>;
+  
 
   
 
