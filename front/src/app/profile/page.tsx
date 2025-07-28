@@ -8,7 +8,7 @@ export default function ProfilePage() {
   const { data, isLoading, error } = useQuery({
     queryKey: ["profile"],
     queryFn: fetchProfile,
-  });
+  });1
 
   
 
